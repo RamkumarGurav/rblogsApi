@@ -7,7 +7,7 @@ const Blog = require("../models/blogModel");
 
 //-------------Get All Procuts--------------------------------
 exports.getAllBlogs = catchAsyncErrors(async (req, res, next) => {
-  const resultsPerPage = 10; //for pagination
+  const resultsPerPage = 9; //for pagination
   const blogsCount = await Blog.countDocuments(); //total no. of products without any queries
 
   let features = new APIFeatures(Blog.find(), req.query)
